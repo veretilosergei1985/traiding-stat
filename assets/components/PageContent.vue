@@ -10,6 +10,7 @@ const error = ref()
 const isLoading = ref(true)
 
 useGetRequest(url, url).then((result) => {
+    console.log(3);
     data.value = result
 }).catch((err) => {
     error.value = err

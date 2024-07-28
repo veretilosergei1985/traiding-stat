@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { useGetRequest } from "@/use/useFetchRequest";
+// import { useGetRequest } from "@/use/useFetchRequest";
 import { ref } from "vue";
 
 const url = '/api/getCategories';
@@ -10,6 +10,7 @@ const error = ref()
 const isLoading = ref(true)
 
 useGetRequest(url, url).then((result) => {
+    console.log(1);
     data.value = result
 }).catch((err) => {
     error.value = err

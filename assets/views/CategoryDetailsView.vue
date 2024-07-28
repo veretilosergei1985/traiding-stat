@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { useGetRequest } from "@/use/useFetchRequest";
+// import { useGetRequest } from "@/use/useFetchRequest";
 
 const route = useRoute();
 
@@ -10,6 +10,7 @@ const error = ref();
 const isLoading = ref(true);
 
 const loadData = (slug) => {
+    console.log(2);
     if (slug) {
         const url = '/api/getCategory/' + slug
         useGetRequest(url, url).then((result) => {
